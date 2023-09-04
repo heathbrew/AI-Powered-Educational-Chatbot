@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signin</title>
+    <link rel="stylesheet" type="text/css" href="static\css\signin.css">
+</head>
+<body>
+<h1>Sign In</h1>
+<div class="signin">
+	<form method="post">
+		<label for="username">Username:</label>
+		<input type="text" name="username" id="username" required>
+		<br>
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" required>
+		<br>
+		<input type="submit" value="Sign In">
+	</form>
+</div>
+
+	<script>
+		function showSignin() {
+		  const signin = document.createElement('iframe');
+		  signin.src = 'signin.html';
+		  document.body.appendChild(signin);
+		}
+	  </script>
+
+</body>
+</html>

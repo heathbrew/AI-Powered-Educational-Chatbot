@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice Recognition Chatbot</title>
+</head>
+<body>
+    <h1>Voice Recognition Chatbot</h1>
+    <div>
+        <button onclick="startListening()">Speak</button>
+    </div>
+    <div>
+        <textarea id="prompt" rows="4" cols="50"></textarea>
+    </div>
+    <div>
+        <button onclick="ask()">Ask</button>
+    </div>
+    <div>
+        <p id="bot-response"></p>
+    </div>
+    <script type="text/javascript">
+        function startListening() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.onresult = function(event) {
+                document.getElementById('prompt').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+        }
+
+        function ask() {
+            var prompt = document.getElementById('prompt').value;
+            if (prompt.trim() !== '') {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById('bot-response').innerHTML = this.responseText;
+                        var synth = window.speechSynthesis;
+                        var utterance = new SpeechSynthesisUtterance(this.responseText);
+                        synth.speak(utterance);
+                    }
+                };
+                xhr.open('POST', '/ask', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.send('prompt=' + encodeURIComponent(prompt));
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="navbar">
+  <style>/* import Bootstrap */
+    @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+    
+    /* add custom styles */
+    body {
+      font-family: sans-serif;
+    }
+    
+    header {
+      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0 2px 5px #333;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    
+    main {
+      padding: 1rem;
+    }
+    
+    .navbar {
+  background-color: #1c1c1c;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li:hover:not(.active) {
+  background-color: #111;
+}
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    form {
+      margin-top: 1rem;
+    }
+    
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+      resize: vertical;
+      font-size: 1.2rem;
+    }
+    
+    input[type="range"] {
+      width: 60%;
+      margin: 0 1rem;
+    }
+    
+    input[type="text"] {
+      border: none;
+      background: none;
+      width: 30px;
+    }
+    
+    input[type="submit"] {
+      display: block;
+      margin: 1rem auto;
+      width: 150px;
+      height: 50px;
+      background-color: lightpink;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    #loading {
+      display: none;
+      color: gray;
+      margin-top: 1rem;
+    }
+    
+    #sidebarToggle{
+      display: block;
+      margin: 1rem auto;
+      width: 200px;
+      height: 50px;
+      background-color: lightblue;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+    
+    pre {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+      text-align: justify;
+      line-height: 1.5;
+    }
+    
+    .sidebar{
+      margin-top: 20px;
+    }
+    
+    .dia{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  </style>
+  <nav class="navbar">
+    <ul>
+      <li class="active"><a href="dashboard">Dashboard</a></li>
+      <li><a href="chat_2">Chat</a></li>
+      <li><a href="index2">Speech</a></li>
+    </ul>
+  </nav>
+  <!-- <a href="{{ url_for('dashboard') }}">Dashboard</a>
+  <a href="chat_2">Chat</a> -->
+</div>
+    <h1>Dashboard</h1>
+    <p>Welcome to the dashboard!</p>
+    
+<table border="0" align="right" style="box-shadow:1px 1px 10px rgb(181, 111, 111)" width="30%" height="30%" >
+  <tr>
+  <td align="right" valign="top">
+  <div class="slideshow-container">
+  
+  <div align="center" class="mySlides fade"> 
+    <img src="https://c0.wallpaperflare.com/preview/483/913/258/advanced-ai-anatomy-artificial.jpg" style="width:550px" height="450px">
+    <div class="text">Caption Text</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <img src="https://c1.wallpaperflare.com/preview/991/1018/411/hacker-attack-mask-internet.jpg" style="width:550px" height="450px">
+    <div class="text">Caption Two</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <img src="https://c4.wallpaperflare.com/wallpaper/777/522/459/chess-artificial-intelligence-human-intelligence-wallpaper-preview.jpg" style="width:550px" height="450px">
+    <div class="text">hello</div>
+  </div>
+  
+  <div align="center" class="mySlides fade">
+    <img src="https://c4.wallpaperflare.com/wallpaper/868/586/498/comic-books-marvel-comics-iron-man-superior-iron-man-wallpaper-preview.jpg" style="width:550px" height="450px">
+    <div class="text">Caption Text</div>
+  </div>
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  </td>
+  </tr>
+  <tr align="right" style="background-color:rgb(8, 0, 0);color:rgb(134, 133, 133);height:5px">
+  <td><marquee behavior="alternate">
+  Welcome to Overlords Project.
+  </marquee></td>
+  </tr>
+  </table>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+      function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      </script>
+{% endblock %}

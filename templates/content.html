@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>* 
+    /* Set default font size */
+html {
+  font-size: 16px;
+}
+
+/* Adjust font size based on device screen size */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Adjust layout based on device screen size */
+@media (max-width: 480px) {
+  /* Center content */
+  body {
+    text-align: center;
+  }
+  
+  /* Adjust margins and padding */
+  .content {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+}
+
+    
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header a {
+    text-decoration: none;
+    }
+
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s ease-in-out;
+    }
+    
+    nav ul li a:hover {
+        color: #666;
+    }
+
+    a {
+    color: inherit;
+    text-decoration: none;
+    }
+
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px;
+        background-color: #f5f5f5;
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    
+    .hero button {
+        padding: 15px 30px;
+        background-color: #0070f3;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    .hero button:hover {
+        background-color: #0060c0;
+    }
+    
+    section {
+        padding: 80px;
+    }
+    
+    section h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    section p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+    
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .feature {
+        flex-basis: calc(50% - 20px);
+        padding: 20px;
+        background-color: #f5f5f5;
+        margin-bottom: 40px;
+    }
+    
+    .feature h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .pricing {
+        background-color: #0070f3;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .pricing p {
+        margin-bottom: 40px;
+    }
+    
+    .contact {
+        background-color: #f5f5f5;
+        text-align: center;
+    }
+    
+    .contact p {
+        margin-bottom: 40px;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    footer p {
+        margin-top: 20px;
+    }
+    
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: calc(30% - 20px);
+    }
+    
+    .social-media img {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: opacity 0.2s ease-in-out;
+    }
+    
+    .social-media img:hover {
+        opacity: 0.8;
+    }</style>
+<head>
+	<meta charset="UTF-8">
+	<title>Chat Bot Home Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+        <div width="10%" class="logo">
+            <img style="width: 5%; height: auto;" src = "https://www.seekpng.com/png/full/567-5670503_connect-left-and-right-brain-logo.png" alt="Chat Bot Logo">
+            <a height= "5%" width="10%" text-align="right" style="color:#000000;font-size:40px;" href="#">Virtual Doubtsolver</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Chat Bot Features</a></li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Contact Us</a></li>
+                <li><a href="{{ url_for('signin') }}"></a><td width="10%" align="left"> <a href="signin"onclick="showSignin()">Sign In</a></td></a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="hero">
+		<h1>Get Instant Answers to Your Questions</h1>
+		<h2>Introducing our innovative chat bot that detects your learning style and personality to provide tailored responses.</h2>
+		<a href="{{ url_for('signin') }}"></a><td width="10%" align="left"> <a href="signin"><button>Try It Now</button></a>
+	</section>
+	<section class="how-it-works">
+		<h2>How It Works</h2>
+		<p>Our chat bot uses Open AI API to generate text answers to your questions. It also detects your learning style and personality type using advanced algorithms to provide personalized responses that suit your needs.</p>
+	</section>
+	<section class="features">
+		<h2>Features</h2>
+		<div class="feature">
+			<h3>MBTI Detection</h3>
+			<p>Our chat bot uses Myers-Briggs Type Indicator to identify your personality type and provide customized responses based on your unique traits.</p>
+		</div>
+		<div class="feature">
+			<h3>Learning Style Detection</h3>
+			<p>Our chat bot detects your learning style and adapts its responses to suit your preferences. Whether you're a visual learner, auditory learner, or kinesthetic learner, our chat bot has got you covered.</p>
+		</div>
+	</section>
+	<section class="pricing">
+		<h2>Pricing</h2>
+		<p>We offer flexible pricing plans to suit your needs and budget. Whether you're an individual or a business, we have a plan that will work for you.</p>
+	</section>
+	<section class="contact">
+		<h2>Contact Us</h2>
+		<p>Get in touch with us today to learn more about our chat bot and how it can benefit you. Our friendly team is always happy to answer your questions and provide you with the information you need.</p>
+	</section>
+	<footer>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Chat Bot Features</a></li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div class="social-media">
+			<a href="#"><img src="facebook-icon.png" alt="Facebook Icon"></a>
+			<a href="#"><img src="twitter-icon.png" alt="Twitter Icon"></a>
+			<a href="#"><img src="linkedin-icon.png" alt="LinkedIn Icon"></a>
+		</div>
+		<p>&copy; 2023 Chat Bot. All rights reserved.</p>
+	</footer>
+</body>

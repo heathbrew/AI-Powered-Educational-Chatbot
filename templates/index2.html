@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('https://www.readspeaker.ai/wp-content/uploads/2021/02/voice-artificial-intelligence-readspeaker-840x400.jpg');
+            background-size: cover;
+            background-size: 100% 250%;
+        }
+        header {
+          padding: 1rem;
+          background-color: #fff;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 2rem;
+        }
+        
+        main {
+          padding: 1rem;
+        }
+        
+        h2 {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+        }
+        
+        form {
+          margin-top: 1rem;
+        }
+        header a {
+        text-decoration: none;
+        }
+        .navbar {
+        background-color: #ffffff;
+        overflow: hidden;
+        }
+
+        .navbar ul {
+        float: left;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar li a:hover:not(.active) {
+  background-color: #b47d7d;
+}
+.navbar li:hover:not(.active) {
+  background-color: #b47d7d;
+}
+
+        button {
+        display: block;
+        margin: auto;
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 25px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #3e8e41;
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div width="10%" class="logo">
+                <img style="width: 5%; height: auto;" src = "https://www.seekpng.com/png/full/567-5670503_connect-left-and-right-brain-logo.png" alt="Chat Bot Logo">
+                <a text-align="left" style="color:#000000;font-size:40px;" href="#">Virtual Doubtsolver </a>
+                <a text-align="right" style="color:#000000;font-size:40px;" href="#">Speech to Speech</a>
+            </div> 
+        <ul align = "right">
+            <li class="active"><a style="color:#000000;" href="dashboard">Dashboard</a></li>
+            <li><a style="color:#000000;" href="chat_2">Chat</a></li>
+            <li><a style="color:#000000;" href="#">Speech</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <form method="post" action="/ask">
+    </form>
+
+    <br>
+
+    <button onclick="location.href='/voice'">Speak to Assistant</button>
+</body>
+</html>

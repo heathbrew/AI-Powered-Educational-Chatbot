@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>/* import Bootstrap */
+        /* @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'); */
+        
+     /* add custom styles */
+        body {
+          font-family: sans-serif;
+        }
+        
+        header {
+          padding: 1rem;
+          background-color: #fff;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 2rem;
+        }
+        
+        main {
+          padding: 1rem;
+        }
+        
+        h2 {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+        }
+        
+        form {
+          margin-top: 1rem;
+        }
+        header a {
+        text-decoration: none;
+        }
+
+        
+        .navbar {
+        background-color: #ffffff;
+        overflow: hidden;
+        }
+
+        .navbar ul {
+        float: left;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar li a:hover:not(.active) {
+  background-color: #b47d7d;
+}
+.navbar li:hover:not(.active) {
+  background-color: #b47d7d;
+}
+        textarea {
+          width: 100%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 0.25rem;
+          resize: vertical;
+          font-size: 1.2rem;
+        }
+        
+        input[type="range"] {
+          width: 60%;
+          margin: 0 1rem;
+        }
+        
+        input[type="text"] {
+          border: none;
+          background: none;
+          width: 30px;
+        }
+        
+        input[type="submit"] {
+          display: block;
+          margin: 1rem auto;
+          width: 150px;
+          height: 50px;
+          background-color: lightpink;
+          border: 1px solid #ccc;
+          border-radius: 0.25rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+        
+        #loading {
+          display: none;
+          color: gray;
+          margin-top: 1rem;
+        }
+        
+        #sidebarToggle{
+          display: block;
+          margin: 1rem auto;
+          width: 200px;
+          height: 50px;
+          background-color: lightblue;
+          border: 1px solid #ccc;
+          border-radius: 0.25rem;
+          font-size: 1rem;
+          cursor: pointer;
+          margin-top: 40px;
+        }
+        
+        pre {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          white-space: pre-wrap;
+          word-break: break-word;
+          text-align: justify;
+          line-height: 1.5;
+        }
+        
+        /* .sidebar{
+          margin-top: 20px;
+        } */
+        
+        .dia{
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        </style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Davinci-003</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="static/CJAT.css"> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div width="10%" class="logo">
+                <img style="width: 5%; height: auto;" src = "https://www.seekpng.com/png/full/567-5670503_connect-left-and-right-brain-logo.png" alt="Chat Bot Logo">
+                <a text-align="left" style="color:#000000;font-size:40px;" href="#">Virtual Doubtsolver </a>
+                <a text-align="right" style="color:#000000;font-size:40px;" href="#">Text to Text</a>
+            </div> 
+        <ul>
+            <li class="active"><a style="color:#000000;" href="dashboard">Dashboard</a></li>
+            <li><a style="color:#000000;" href="chat_2">Chat</a></li>
+            <li><a style="color:#000000;" href="index2">Speech</a></li>
+        </ul>
+        </nav>
+    </header>
+  <!-- <header>
+    <nav class="navbar">
+        <ul>
+            <div width="10%" class="logo">
+                <img style="width: 5%; height: auto;" src = "https://www.seekpng.com/png/full/567-5670503_connect-left-and-right-brain-logo.png" alt="Chat Bot Logo">
+                <a height= "5%" width="5%" text-align="right" style="color:#000000;font-size:40px;" href="#">Virtual Doubtsolver</a>
+            </div> 
+            <a><h1>Davinci-003</h1>
+            <h2>Artificial Intelligence at Your Fingertips</h2></a>
+          <li class="active"><a align="left" href="dashboard">Dashboard</a></li>
+          <li><a align="left" href="chat_2">Chat</a></li>
+        </ul>
+      </nav>
+  </header> -->
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="content">
+            <h2>Temperature</h2>
+            <form method="post" onsubmit="submit.disabled=true">
+              <label for="temperature">Temperature:</label>
+              <input type="range" name="temperature" id="temperature" min="0" max="1" step="0.1" value="0.5" onchange="show()">
+              <input type="text" id="temperature-value" id="temperature-value" value="0.5">
+              <br>
+              <textarea name="question" placeholder="Type your question here." rows="4"></textarea>
+              <br>
+              <input type="submit" value="Submit" id="submit">
+            </form>
+            <div id="loading"><b>Waiting for response...</b></div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="sidebar">
+            <h3>Temperature Guide</h3>
+            <ul >
+              <li>Code Refactoring - 0.2</li>
+              <li>Email Parser - 0.3</li>
+              <li>Chat Bot - 0.5</li>
+              <li>Summarise Text - 0.5</li>
+              <li>Code Generation - 0.8</li>
+              <li>Story Writing - 0.8</li>
+            </ul>
+          </div>
+          <button id="sidebarToggle">Hide Temperature Guide</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dia">                
+      {% if question %}
+        <div class="result">
+          <div class="question"><b>Alittlebean:</b>
+            <pre>{{ question }}</pre>
+          </div>
+          <hr>
+          <div class="response"><b>Davinci-003-Tem-{{ temperature }}:</b>
+            <pre>{{ res }}</pre>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+  <script src="static/script.js"></script>
+  <script>
+    $("#sidebarToggle").click(function() {
+      $(".sidebar").toggle();
+      if ($(".sidebar").is(":visible")) {
+        $(this).text("Hide Temperature Guide");
+      } else {
+        $(this).text("Show Temperature Guide");
+      }
+    });
+  </script>
+</body>
+
+</html>
