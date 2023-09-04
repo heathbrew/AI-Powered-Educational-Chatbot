@@ -20,12 +20,24 @@ We propose the development of an AI-powered educational chatbot to address these
 **5. Individual/Team:**
 The project will be undertaken by a team of four senior computer science students with expertise in natural language processing, machine learning, and web development.
 
-**6. Duration:**
-The project will span over a period of 6 months, from October 1, 2023, to March 31, 2024.
+**6. Duration:** 3 months
 
-**7. Mentors with Designation:**
-- Dr. Amanda Roberts, Assistant Professor of Computer Science
-- Mr. John Smith, Senior AI Researcher
+**7. Screenshots:**
+![1](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/a40dc803-4083-40f5-a112-549b612e2e4e)
+![2](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/364da545-b50f-453b-b34e-5c6c104db17e)
+![3](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/549d1a08-31c1-43cd-ab1d-3d6a795ab1d4)
+![4](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/09f366e6-3c89-4fac-83de-8d58ed67532c)
+![5](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/f7b024cf-9e37-4c11-85b7-e77db9d576e9)
+![6](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/75ac6dbc-2a25-4d9d-a5e8-b4355c184fa5)
+![7](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/27ece6b7-db7a-4e43-b1fb-431c8c736d49)
+![8](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/bf18dc52-c5d2-45dd-8313-5eb87786f5da)
+![9](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/9a313d5d-6d2c-4455-b3d1-ad3ef8d02aca)
+![10](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/4241f6f3-c450-4f5e-bf19-184e2327f9b2)
+![11](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/c14834da-399a-4986-a02f-288ab741fbfb)
+![12](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/d9f8e39c-176f-4ef0-9703-dbf04a19dbc4)
+![13](https://github.com/heathbrew/AI-Powered-Educational-Chatbot/assets/55629425/04845fa4-ff39-414d-9eec-91969949abe4)
+
+
 
 **8. Observations:**
 - Improve student satisfaction by providing instant and accurate responses.
