@@ -35,8 +35,8 @@ The project will span over a period of 6 months, from October 1, 2023, to March 
 
 **9. Link to Project:**
 The project documentation, source code, and live demo will be available on the GitHub repository: https://github.com/heathbrew/AI-Powered-Educational-Chatbot
-**`send_gptnew` Function: AI-Powered Response Generation**
 
+**`send_gptnew` Function: AI-Powered Response Generation**
 This pivotal function orchestrates the AI-powered response generation process within the educational chatbot. By leveraging the GPT-3.5 Turbo model and various similarity analyses, it crafts relevant and informative responses based on the user's input prompt and the desired response temperature.
 
 **Function Steps:**
