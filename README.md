@@ -68,4 +68,4 @@ In alignment with the chatbot's multifaceted functionality, the code encompasses
 **Loading QA Data:**
 The chatbot's responsiveness is rooted in the availability of relevant data. The code ensures a steady supply of such data by harnessing the `load_qa_data` function to read question-answer pairs and associated metadata from a CSV file. This foundation of knowledge facilitates the chatbot's capacity to furnish tailored and informative responses to user queries.
 
-Through systematic orchestration of these processes, the `send_gptnew` function embodies the chatbot's prowess in intelligently crafting responses, thereby augmenting the educational support experience.
+Through the systematic orchestration of these processes, the `send_gptnew` function embodies the chatbot's prowess in intelligently crafting responses, thereby augmenting the educational support experience.
